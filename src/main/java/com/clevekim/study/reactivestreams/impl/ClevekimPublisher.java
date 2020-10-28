@@ -20,7 +20,6 @@ public class ClevekimPublisher implements Publisher<Integer> {
     @Override
     public void subscribe(Subscriber<? super Integer> subscriber) {
 
-        System.out.println("ClevekimPublisher : " + subscriber);
         logger.info("ClevekimPublisher : " + subscriber);
 
         subscriber.onSubscribe(new ClevekimSubscription(executor, subscriber));
